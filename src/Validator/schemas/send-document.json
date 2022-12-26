@@ -1,0 +1,175 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/send-document.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "ok",
+    "result"
+  ],
+  "properties": {
+    "ok": {
+      "$id": "#root/ok",
+      "title": "Ok",
+      "type": "boolean",
+      "default": true
+    },
+    "result": {
+      "$id": "#root/result",
+      "title": "Result",
+      "type": "object",
+      "required": [
+        "message_id",
+        "from",
+        "chat",
+        "date",
+        "document"
+      ],
+      "properties": {
+        "message_id": {
+          "$id": "#root/result/message_id",
+          "title": "Message_id",
+          "type": "integer",
+          "default": 0
+        },
+        "from": {
+          "$id": "#root/result/from",
+          "title": "From",
+          "type": "object",
+          "required": [
+            "id",
+            "is_bot",
+            "first_name",
+            "username"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/result/from/id",
+              "title": "Id",
+              "type": "integer",
+              "default": 0
+            },
+            "is_bot": {
+              "$id": "#root/result/from/is_bot",
+              "title": "Is_bot",
+              "type": "boolean",
+              "default": true
+            },
+            "first_name": {
+              "$id": "#root/result/from/first_name",
+              "title": "First_name",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "username": {
+              "$id": "#root/result/from/username",
+              "title": "Username",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            }
+          }
+        }
+      ,
+        "chat": {
+          "$id": "#root/result/chat",
+          "title": "Chat",
+          "type": "object",
+          "required": [
+            "id",
+            "title",
+            "type",
+            "all_members_are_administrators"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/result/chat/id",
+              "title": "Id",
+              "type": "integer",
+              "default": 0
+            },
+            "title": {
+              "$id": "#root/result/chat/title",
+              "title": "Title",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "type": {
+              "$id": "#root/result/chat/type",
+              "title": "Type",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "all_members_are_administrators": {
+              "$id": "#root/result/chat/all_members_are_administrators",
+              "title": "All_members_are_administrators",
+              "type": "boolean",
+              "default": true
+            }
+          }
+        }
+      ,
+        "date": {
+          "$id": "#root/result/date",
+          "title": "Date",
+          "type": "integer",
+          "default": 0
+        },
+        "document": {
+          "$id": "#root/result/document",
+          "title": "Document",
+          "type": "object",
+          "required": [
+            "file_name",
+            "mime_type",
+            "file_id",
+            "file_unique_id",
+            "file_size"
+          ],
+          "properties": {
+            "file_name": {
+              "$id": "#root/result/document/file_name",
+              "title": "File_name",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "mime_type": {
+              "$id": "#root/result/document/mime_type",
+              "title": "Mime_type",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "file_id": {
+              "$id": "#root/result/document/file_id",
+              "title": "File_id",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "file_unique_id": {
+              "$id": "#root/result/document/file_unique_id",
+              "title": "File_unique_id",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "file_size": {
+              "$id": "#root/result/document/file_size",
+              "title": "File_size",
+              "type": "integer",
+              "default": 0
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}

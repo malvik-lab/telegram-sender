@@ -1,0 +1,74 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/get-me.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "ok",
+    "result"
+  ],
+  "properties": {
+    "ok": {
+      "$id": "#root/ok",
+      "title": "Ok",
+      "type": "boolean",
+      "default": true
+    },
+    "result": {
+      "$id": "#root/result",
+      "title": "Result",
+      "type": "object",
+      "required": [
+        "id",
+        "is_bot",
+        "first_name",
+        "username",
+        "can_join_groups",
+        "can_read_all_group_messages",
+        "supports_inline_queries"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#root/result/id",
+          "title": "Id",
+          "type": "integer",
+          "default": 0
+        },
+        "is_bot": {
+          "$id": "#root/result/is_bot",
+          "title": "Is_bot",
+          "type": "boolean"
+        },
+        "first_name": {
+          "$id": "#root/result/first_name",
+          "title": "First_name",
+          "type": "string",
+          "pattern": "^.*$"
+        },
+        "username": {
+          "$id": "#root/result/username",
+          "title": "Username",
+          "type": "string",
+          "default": "",
+          "pattern": "^.*$"
+        },
+        "can_join_groups": {
+          "$id": "#root/result/can_join_groups",
+          "title": "Can_join_groups",
+          "type": "boolean"
+        },
+        "can_read_all_group_messages": {
+          "$id": "#root/result/can_read_all_group_messages",
+          "title": "Can_read_all_group_messages",
+          "type": "boolean"
+        },
+        "supports_inline_queries": {
+          "$id": "#root/result/supports_inline_queries",
+          "title": "Supports_inline_queries",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/send-location.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "ok",
+    "result"
+  ],
+  "properties": {
+    "ok": {
+      "$id": "#root/ok",
+      "title": "Ok",
+      "type": "boolean"
+    },
+    "result": {
+      "$id": "#root/result",
+      "title": "Result",
+      "type": "object",
+      "required": [
+        "message_id",
+        "from",
+        "chat",
+        "date",
+        "location"
+      ],
+      "properties": {
+        "message_id": {
+          "$id": "#root/result/message_id",
+          "title": "Message_id",
+          "type": "integer"
+        },
+        "from": {
+          "$id": "#root/result/from",
+          "title": "From",
+          "type": "object",
+          "required": [
+            "id",
+            "is_bot",
+            "first_name",
+            "username"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/result/from/id",
+              "title": "Id",
+              "type": "integer"
+            },
+            "is_bot": {
+              "$id": "#root/result/from/is_bot",
+              "title": "Is_bot",
+              "type": "boolean"
+            },
+            "first_name": {
+              "$id": "#root/result/from/first_name",
+              "title": "First_name",
+              "type": "string",
+              "pattern": "^.*$"
+            },
+            "username": {
+              "$id": "#root/result/from/username",
+              "title": "Username",
+              "type": "string",
+              "pattern": "^.*$"
+            }
+          }
+        }
+      ,
+        "chat": {
+          "$id": "#root/result/chat",
+          "title": "Chat",
+          "type": "object",
+          "required": [
+            "id",
+            "first_name",
+            "username",
+            "type"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/result/chat/id",
+              "title": "Id",
+              "type": "integer"
+            },
+            "first_name": {
+              "$id": "#root/result/chat/first_name",
+              "title": "First_name",
+              "type": "string",
+              "pattern": "^.*$"
+            },
+            "username": {
+              "$id": "#root/result/chat/username",
+              "title": "Username",
+              "type": "string",
+              "pattern": "^.*$"
+            },
+            "type": {
+              "$id": "#root/result/chat/type",
+              "title": "Type",
+              "type": "string",
+              "pattern": "^.*$"
+            }
+          }
+        }
+      ,
+        "date": {
+          "$id": "#root/result/date",
+          "title": "Date",
+          "type": "integer"
+        },
+        "location": {
+          "$id": "#root/result/location",
+          "title": "Location",
+          "type": "object",
+          "required": [
+            "latitude",
+            "longitude"
+          ],
+          "properties": {
+            "latitude": {
+              "$id": "#root/result/location/latitude",
+              "title": "Latitude",
+              "type": "number"
+            },
+            "longitude": {
+              "$id": "#root/result/location/longitude",
+              "title": "Longitude",
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}

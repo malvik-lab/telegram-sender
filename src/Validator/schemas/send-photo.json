@@ -1,0 +1,161 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/send-photo.json",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "ok",
+    "result"
+  ],
+  "properties": {
+    "ok": {
+      "$id": "#root/ok",
+      "title": "Ok",
+      "type": "boolean"
+    },
+    "result": {
+      "$id": "#root/result",
+      "title": "Result",
+      "type": "object",
+      "required": [
+        "message_id",
+        "from",
+        "chat",
+        "date",
+        "photo"
+      ],
+      "properties": {
+        "message_id": {
+          "$id": "#root/result/message_id",
+          "title": "Message_id",
+          "type": "integer"
+        },
+        "from": {
+          "$id": "#root/result/from",
+          "title": "From",
+          "type": "object",
+          "required": [
+            "id",
+            "is_bot",
+            "first_name",
+            "username"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/result/from/id",
+              "title": "Id",
+              "type": "integer"
+            },
+            "is_bot": {
+              "$id": "#root/result/from/is_bot",
+              "title": "Is_bot",
+              "type": "boolean"
+            },
+            "first_name": {
+              "$id": "#root/result/from/first_name",
+              "title": "First_name",
+              "type": "string",
+              "pattern": "^.*$"
+            },
+            "username": {
+              "$id": "#root/result/from/username",
+              "title": "Username",
+              "type": "string",
+              "pattern": "^.*$"
+            }
+          }
+        }
+      ,
+        "chat": {
+          "$id": "#root/result/chat",
+          "title": "Chat",
+          "type": "object",
+          "required": [
+            "id",
+            "first_name",
+            "username",
+            "type"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/result/chat/id",
+              "title": "Id",
+              "type": "integer"
+            },
+            "first_name": {
+              "$id": "#root/result/chat/first_name",
+              "title": "First_name",
+              "type": "string",
+              "pattern": "^.*$"
+            },
+            "username": {
+              "$id": "#root/result/chat/username",
+              "title": "Username",
+              "type": "string",
+              "pattern": "^.*$"
+            },
+            "type": {
+              "$id": "#root/result/chat/type",
+              "title": "Type",
+              "type": "string",
+              "pattern": "^.*$"
+            }
+          }
+        }
+      ,
+        "date": {
+          "$id": "#root/result/date",
+          "title": "Date",
+          "type": "integer"
+        },
+        "photo": {
+          "$id": "#root/result/photo",
+          "title": "Photo",
+          "type": "array",
+          "items":{
+            "$id": "#root/result/photo/items",
+            "title": "Items",
+            "type": "object",
+            "required": [
+              "file_id",
+              "file_unique_id",
+              "file_size",
+              "width",
+              "height"
+            ],
+            "properties": {
+              "file_id": {
+                "$id": "#root/result/photo/items/file_id",
+                "title": "File_id",
+                "type": "string",
+                "pattern": "^.*$"
+              },
+              "file_unique_id": {
+                "$id": "#root/result/photo/items/file_unique_id",
+                "title": "File_unique_id",
+                "type": "string",
+                "pattern": "^.*$"
+              },
+              "file_size": {
+                "$id": "#root/result/photo/items/file_size",
+                "title": "File_size",
+                "type": "integer"
+              },
+              "width": {
+                "$id": "#root/result/photo/items/width",
+                "title": "Width",
+                "type": "integer"
+              },
+              "height": {
+                "$id": "#root/result/photo/items/height",
+                "title": "Height",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
