@@ -18,10 +18,10 @@ composer require malvik-lab/telegram-sender
 ```php
 <?php
 
+require 'vendor/autoload.php';
+
 use GuzzleHttp\Client;
 use MalvikLab\TelegramSender\TelegramSender;
-
-require 'vendor/autoload.php';
 
 $telegramSender = new TelegramSender('YOUR_BOT_KEY', new Client());
 
